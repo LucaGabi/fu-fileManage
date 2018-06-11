@@ -1,0 +1,91 @@
+/** 
+	fu-fileManage 
+	auth : dengdeng    2017/8/10
+	descript: 文件管理组件样式 
+**/
+@fu-prefix: fu;
+@fileManage-prefix-cls: ~"@{fu-prefix}-fileManage";
+
+@highLightColor: #ffc446;
+
+@import '../asset/less/iconfont.less';
+
+.@{fileManage-prefix-cls}{
+	&-control{
+		height: 180px;
+		width: 40px;
+		background-color: #47423c;
+		border: 0 solid #47423c;
+		float: right;
+	}
+	&-panel{
+		height: 170px;
+		min-width: 124px;
+		border: 0 solid #47423c;
+		background-color: #3b3835;
+		margin-right: 40px;
+		padding: 5px;
+		&-default{
+			overflow-y: auto;
+		}
+		&-upload{
+	
+		}
+	}
+	&-tab{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		&-item{
+			width: 40px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			transition: background-color .1s ease-in;
+			cursor: pointer;
+			.fu-iconfont{
+				font-size: 18px;
+				color: #b7afa5;
+			}
+			&:hover{
+				background-color: #625c53;
+			}
+		}
+		&-item-active{
+			.fu-iconfont{
+				color: #ffc446;
+			}
+		}
+		&-item-hidden{
+			display: none;
+		}
+	}
+	&-list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		&-item{
+			line-height: 14px;
+			font-size: 12px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 140px;
+			color: #fff;
+			input{
+				vertical-align: middle;
+			}
+			a{
+				color: #fff;
+				transition: color .1s ease-in;
+				text-decoration: none;
+				
+				&:hover{
+					color: #ffc446;
+				}
+			}
+		}
+		
+	}
+}
+

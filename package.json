@@ -1,0 +1,44 @@
+{
+  "name": "fu-filemanage",
+  "version": "1.0.0",
+  "description": "``` html\r <!DOCTYPE html>\r <html>",
+  "main": "dist/fileManage.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "dev": "webpack --mode development --watch --progress --display-modules --colors --display-reasons",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fund-ui/fu-fileManage.git"
+  },
+  "author": "Dengdeng Ju",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-import": "^1.6.7",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.10",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.6",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.20.2",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/fund-ui/fu-fileManage/issues"
+  },
+  "homepage": "https://github.com/fund-ui/fu-fileManage#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

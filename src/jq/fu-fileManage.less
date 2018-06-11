@@ -1,0 +1,196 @@
+/** 
+	crm-fileManage 
+	auth : dengdeng    2017/8/10
+	descript: 文件管理组件样式 
+**/
+
+@fontDefaultColor: #b7afa5;
+@fontLinkColor: #ffc446;
+@tabColor: #47423C; 
+
+.crm-fileManage{
+	position: relative;
+	height: 180px;
+	clear: both;
+	box-sizing: content-box;
+    margin-top:10px;
+    .crm-fileManage-left{
+		height: 100%;
+		display: block;
+		min-width: 124px;
+		border: 0px solid #47423c;
+	    margin-right:40px;
+	    .pannel-default{
+		    padding:5px;
+		    height: 100%;
+			background-color: rgb(59, 56, 53);
+			overflow-y: auto;
+			label{
+				display: inline-block;
+				width: 100px;
+				font-size: 12px;
+				line-height: 14px;
+				font-weight: normal;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				margin: 0px;
+				padding: 0px;
+				input[type=checkbox]{
+				    margin:0px;
+				    vertical-align:middle;
+				}
+				a{
+					text-decoration: none;
+					color: #fff;
+					cursor: pointer;
+					&:hover{
+						color: @fontLinkColor;
+					}
+					transition: color 0.1s ease-in;
+				}
+			}	
+		}
+		.pannel-upload{	
+			height: 100%;
+			background-color: rgb(59, 56, 53);
+			overflow-y: auto;
+			.uploadField{
+				width: 60px;
+				height: 60px;
+				margin: 50px auto 10px;
+				background-color: #625c53;
+				border: 1px dashed #c9c9c9;
+				border-radius: 10px;
+				cursor: pointer;
+				.uploadField-text{
+					font-size: 36px;
+					line-height: 60px;
+					padding-left: 16px;
+				}
+			}
+			.wu-example{
+				width: 130px;
+				margin: 0 auto;
+				.uploader-list{
+					.item{
+						.fpath{
+							color: @fontDefaultColor;
+							i{
+								color: @fontLinkColor;
+							}
+						}
+						.info{
+							font-weight: normal;
+							font-size: 12px;
+						}
+						.state{
+							color: @fontLinkColor;
+						}
+						.progress {
+							width: 100%;
+							background-color: @fontDefaultColor;
+							.progress-bar{
+								width: 0%;
+								height: 2px; 
+								background-color: @fontLinkColor;
+							}
+						}
+					}
+				}
+				.btns{
+					width: 100%;
+					.webuploader-container{
+						width: 100%;
+						display: block;
+						float: none;
+						.webuploader-pick{
+							position: relative;
+							display: inline-block;
+							cursor: pointer;
+							border-radius: 10px;
+							overflow: hidden;
+							background-color: transparent;
+							border: 1px dashed @fontDefaultColor;
+							color: @fontDefaultColor;
+							width: 100px;
+							height: 100px;
+							margin: 10px 0 10px 15px;
+							vertical-align: middle;
+							font-size: 36px;
+							line-height: 100px;
+							float: none;
+							text-align: center;
+						}					
+					}
+					.btn {
+						margin-left: 0px;
+						margin: 0 auto;
+						display: block;
+						float: none;
+						background-color: transparent;
+						border-radius: 0px;
+						line-height: 28px;
+						width: 70px;
+						cursor: pointer;
+						font-size: 32px;
+						text-align: center;
+						transition: color 0.1s ease-in;
+						color: @fontDefaultColor;
+						&:hover{
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+    }
+    .crm-fileManage-right{
+		height: 100%;
+		display: block;
+		width: 40px;
+		background-color: @tabColor;
+		border: 0px solid @tabColor;
+	    float: right;
+	    .tab{
+			list-style: none;
+		    padding:0px; 
+		    margin:0px;
+		    li{
+		    	display: block;
+				background-repeat: no-repeat;
+				background-size: 40%;
+				background-position: 10px 20px;
+				width: 40px;
+				height: 60px;
+				text-align: center;
+				padding-top: 20px;
+				transition:background-color 0.1s ease-in;
+				cursor: pointer;
+				i{
+					font-size: 18px !important;
+					color: @fontDefaultColor;
+				}
+				&:hover{
+					background-color: #625c53;
+				}
+		    }
+		    .active{
+		    	i{
+		    		color: @fontLinkColor !important;
+		    	}
+			}
+			.hide{
+				display: none;
+			}
+			.show{
+				display: block;
+			}
+		    .no-hover{
+		    	&:hover{
+					background-color: @tabColor;
+				}
+		    }
+	    }
+    }
+}
