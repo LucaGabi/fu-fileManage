@@ -1,6 +1,26 @@
 # FuFileManage
 
-## 1. 快速开始
+## 1. 构建
+
+进入 `fu-fileManage` 文件夹，确保本地安装过 `node` 和 `npm` 后，运行如下命令
+
+``` npm
+npm install
+```
+
+开发调试
+
+```npm
+npm run dev
+```
+
+打包发布
+
+```npm
+npm run build
+```
+
+## 2. 快速开始
 
 ``` html
 <!DOCTYPE html>
