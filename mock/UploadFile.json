@@ -1,0 +1,11 @@
+{
+    "Id": 0,
+    "TableName": "dbo.Task",
+    "IdentityId": "1",
+    "FileId": "2c2d2763-f5be-450f-ac34-16139b927fb4",
+    "FileName": "br-intro-1.png",
+    "TimeStamp": null,
+    "TimeStampUser": "ceiam",
+    "DeleteState": false,
+    "AllowPreview": true
+}

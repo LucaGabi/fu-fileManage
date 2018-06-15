@@ -1,0 +1,134 @@
+[
+    {
+        "Id": 4,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "40fb7eb4-e7d8-47eb-a45e-160a5c2ff8d3",
+        "FileName": "u=98527.jpg",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ytzhu",
+        "DeleteState": true,
+        "AllowPreview": true
+    },
+    {
+        "Id": 8,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "bb7f8e4c-4a6d-4c3b-a402-43b8fc02c6a8",
+        "FileName": "br-banner-2.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": false
+    },
+    {
+        "Id": 9,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "e2436296-e185-4e03-95c1-5d60a0338b78",
+        "FileName": "br-banner-1.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": false
+    },
+    {
+        "Id": 11,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "08181821-a804-4c61-aea9-a6af1a9fad87",
+        "FileName": "证券列表.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": false
+    },
+    {
+        "Id": 14,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "df1a920a-fad7-4755-89ab-b64c6bfbe61d",
+        "FileName": "br-banner-3.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": false
+    },
+    {
+        "Id": 15,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "71d3c2d1-07b7-4e7d-9f00-aba740a95d7e",
+        "FileName": "br-banner-1.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": false
+    },
+    {
+        "Id": 17,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "01b71582-4dd2-4628-8506-38f34b3fe6a5",
+        "FileName": "br-banner-1.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": false
+    },
+    {
+        "Id": 21,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "b1561f27-8596-4656-a916-8704e63bf2b5",
+        "FileName": "br-banner.psd",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": false
+    },
+    {
+        "Id": 22,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "c0340d37-b3bd-41c8-9d6a-48ad9b877c85",
+        "FileName": "2017BULLETINE.pdf",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": true
+    },
+    {
+        "Id": 23,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "dec8e60c-e1d6-4e9f-b3e8-3bd681547609",
+        "FileName": "2017BULLETINE.pdf",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": true
+    },
+    {
+        "Id": 26,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "1fe50d76-67de-4bd4-9a1c-d0d146fb84ab",
+        "FileName": "br-intro-2.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": true
+    },
+    {
+        "Id": 27,
+        "TableName": "dbo.Task",
+        "IdentityId": "1",
+        "FileId": "d5d6a0b5-4be7-4a23-bbae-4b696cc35191",
+        "FileName": "br-intro-3.png",
+        "TimeStamp": "2018-06-14",
+        "TimeStampUser": "ceiam",
+        "DeleteState": true,
+        "AllowPreview": true
+    }
+]
