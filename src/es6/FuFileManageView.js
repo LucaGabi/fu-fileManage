@@ -89,6 +89,18 @@ class FuFileManageView {
         }
     }
     /**
+     * 公共方法-获取选中的文件id，并且拼接成字符串
+     * @return {String} seletedArr fileId拼接字符串
+     */
+    getSelectedFileId() {
+        let $checkboxArr = this.$This.find('.fu-fileManage-list-item input[type="checkbox"]');
+        let seletedArr = '';
+        $checkboxArr.each((index, element) => {
+            $(element).is(':checked') ? seletedArr = $(element).val() + ',' + seletedArr : seletedArr = seletedArr;
+        });
+        return seletedArr;
+    }
+    /**
      * 私有方法-根据点击的控制器，切换面板
      * @param {String} type 根据传入的模式类型，切换视图
      */

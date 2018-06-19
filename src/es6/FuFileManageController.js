@@ -2,9 +2,10 @@
  * 类-控制层
  */
 class FuFileManageController {
-    constructor(model, view) {
+    constructor(model, view, service) {
         this.model = model;
         this.view = view;
+        this.service = service;
     }
     /**
      * 公共方法-实例化
@@ -26,20 +27,23 @@ class FuFileManageController {
      * 公共方法-加载文件列表
      */
     loadFileList() {
-        this.model.load()
+        this.service.getFileList(this.model.find('identityId'), this.model.find('tableName'))
             .then((res) => {
                 this.view.renderFileList(res);
+                this.model.save('fileList', res);
+                console.log('load', this.model.find('fileList'))
             });
     }
     /**
      * 公共方法-删除文件
      */
     deleteFile() {
-        console.log('delete')
-        // this.model.delete(url)
-        //     .then((res) => {
-        //         this.loadFileList();
-        //     });
+        this.model.save('fileId', this.view.getSelectedFileId());
+        this.service.deleteFileById(this.model.find('fileId'))
+            .then((res) => {
+                this.loadFileList();
+                console.log('delete', this.model.find('fileId'))
+            });
     }
     /**
      * 公共方法-下载文件
