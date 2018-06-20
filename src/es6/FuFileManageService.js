@@ -6,7 +6,7 @@ import $ from 'jquery';
  */
 class FuFileManageService {
     constructor() {
-        
+
     }
     /**
      * http请求-获取文件集合
@@ -30,25 +30,32 @@ class FuFileManageService {
      */
     deleteFileById(fileId) {
         return new Promise((resolve, reject) => {
-            // $.get('/FileManage/DeleteFile', {
-            //     fileId: fileId,
-            // }, (res)=> {
-            //     mock_deleteFile.Code === 1 ? resolve(mock_deleteFile.Code) : reject(mock_deleteFile.Code)
-            // })
+            $.get('http://localhost:54905/FileManage/DeleteFile', {
+                fileId: fileId,
+            }, (res)=> {
+                res.Code === 1 ? resolve(res.Code) : reject(res.Code)
+            })
         })
     }
     /**
-     * http请求-根据id下载文件
+     * http请求-下载前校验
      * @param {String} downloadStr 文件id字符串，以逗号，分隔
      */
-    AllowDownload(downloadStr) {
+    allowDownload(downloadStr) {
         return new Promise((resolve, reject) => {
-            $.post('/FileManage/AllowDownload', {
+            $.post('http://localhost:54905/FileManage/AllowDownload', {
                 downloadStr: downloadStr
             }, (res)=> {
-                resolve(res);
+                res.Code === 1 ? resolve(res.Code) : reject(res.Code)
             })
         })
+    }
+    /**
+     * http请求-根据id下载文件，使用重定向
+     * @param {String} downloadStr 文件id字符串，以逗号，分隔
+     */
+    download(downloadStr) {
+        location.href = `http://localhost:54905/FileManage/download?downloadStr=${downloadStr}`;
     }
     CheckFileChunk() {
         $.POST('/FileManage/CheckFileChunk', {

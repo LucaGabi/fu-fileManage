@@ -44,19 +44,24 @@ class FuFileManageController {
         this.model.save('fileId', this.view.getSelectedFileId());
         this.service.deleteFileById(this.model.find('fileId'))
             .then((res) => {
+                console.log('delete', '删除成功');
                 this.loadFileList();
-                console.log('delete', this.model.find('fileId'))
+            }, ()=>{
+                console.log('delete', '删除失败');
             });
     }
     /**
      * 公共方法-下载文件
      */
     downloadFile() {
-        console.log('download')
-        // this.model.download(url)
-        //     .then((res) => {
-        //         this.loadFileList();
-        //     });
+        this.model.save('downloadStr', this.view.getSelectedFileId());
+        this.service.allowDownload(this.model.find('downloadStr'))
+            .then((res) => {
+                console.log('download', '下载文档');
+                this.service.download(this.model.find('downloadStr'))
+            }, ()=>{
+                console.log('download', '文件不存在');
+            });
     }
     /**
      * 公共方法-上传文件
