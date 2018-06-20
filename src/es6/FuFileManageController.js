@@ -8,7 +8,7 @@ class FuFileManageController {
         this.service = service;
     }
     /**
-     * 公共方法-实例化
+     * 公共方法-初始化组件
      */
     init() {
         this.view.renderLayout('app');
@@ -21,7 +21,10 @@ class FuFileManageController {
         this.view.bindEvent('EVENT_UPLOAD', () => {
             this.uploadFile();
         });
+        // 加载文件列表
         this.loadFileList();
+        // 初始化文件上传控件
+        
     }
     /**
      * 公共方法-加载文件列表

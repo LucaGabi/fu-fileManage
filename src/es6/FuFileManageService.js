@@ -15,21 +15,18 @@ class FuFileManageService {
      */
     getFileList(identityId, tableName) {
         return new Promise((resolve, reject) => {
-            // $.get('/FileManage/GetAttachmentList', {
-            //     identityId: identityId,
-            //     tableName: tableName
-            // }, (res)=> {
-            //     resolve(res);
-            //     return mock_fileLists;
-            // })
-            setTimeout(() => {
-                resolve(mock_fileLists);
-            }, 1000)
+            $.get('http://localhost:54905/FileManage/GetAttachmentList', {
+                identityId: identityId,
+                tableName: tableName
+            }, (res)=> {
+                resolve(res);
+                return mock_fileLists;
+            })
         })
     }
     /**
      * http请求-根据id删除文件
-     * @param {String} fileId 
+     * @param {String} fileId 文件id字符串，以逗号，分隔
      */
     deleteFileById(fileId) {
         return new Promise((resolve, reject) => {
@@ -38,20 +35,19 @@ class FuFileManageService {
             // }, (res)=> {
             //     mock_deleteFile.Code === 1 ? resolve(mock_deleteFile.Code) : reject(mock_deleteFile.Code)
             // })
-            setTimeout(() => {
-                if(mock_deleteFile.Code === 1) {
-                    resolve(mock_deleteFile.Code)
-                } else {
-                    reject('删除失败')
-                }
-            }, 1000)
         })
     }
-    AllowDownload() {
-        $.POST('/FileManage/AllowDownload', {
-            downloadStr: "40fb7eb4-e7d8-47eb-a45e-160a5c2ff8d3"
-        }, (res)=> {
-            resolve(res);
+    /**
+     * http请求-根据id下载文件
+     * @param {String} downloadStr 文件id字符串，以逗号，分隔
+     */
+    AllowDownload(downloadStr) {
+        return new Promise((resolve, reject) => {
+            $.post('/FileManage/AllowDownload', {
+                downloadStr: downloadStr
+            }, (res)=> {
+                resolve(res);
+            })
         })
     }
     CheckFileChunk() {

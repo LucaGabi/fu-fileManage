@@ -18,6 +18,10 @@ module.exports = {
             template: 'index.html'
         })
     ],
+    devServer: { 
+        host: 'localhost', 
+        port: 4000
+    },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
