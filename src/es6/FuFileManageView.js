@@ -53,11 +53,25 @@ class FuFileManageView {
         let tag = $.map(fileArr, (item) => {
             return `<li class="fu-fileManage-list-item" title=${item.FileName}>
                         <input name="FuFileCheckbox" type="checkbox" value=${item.FileId}>
-                        <a target="_Blank" href="/CRM/FileManage/FilePreview?fileid=3b0c3e6e-698a-4d6c-a79c-7a9dec7fec10">${item.FileName}</a>
+                        ${this._renderPreview(item.AllowPreview, item.FileId, item.FileName)}
                     </li>`;
         });
         this.$This.find('.fu-fileManage-list').empty();
         this.$This.find('.fu-fileManage-list').append(tag);
+    }
+    /**
+     * 私有方法-渲染预览选项
+     * @param {Boolean} allowPreview 是否可预览
+     * @param {String} fileId 文件id
+     * @param {String} fileName 文件名称
+     * @return {String} html 拼接字符串
+     */
+    _renderPreview(allowPreview, fileId, fileName) {
+        if(allowPreview){
+            return `<a target="_Blank" href="http://localhost:54905/FileManage/FilePreview?fileid=${fileId}">${fileName}</a>`;
+        } else {
+            return `<a href="#">${fileName}</a>`;
+        }
     }
     /**
      * 公共方法-为组件绑定点击事件
