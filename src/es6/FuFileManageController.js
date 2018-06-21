@@ -24,7 +24,6 @@ class FuFileManageController {
         // 加载文件列表
         this.loadFileList();
         // 初始化文件上传控件
-        
     }
     /**
      * 公共方法-加载文件列表
@@ -42,32 +41,37 @@ class FuFileManageController {
      */
     deleteFile() {
         this.model.save('fileId', this.view.getSelectedFileId());
-        this.service.deleteFileById(this.model.find('fileId'))
+        if(this.view.getSelectedFileId() != ""){
+            this.service.deleteFileById(this.model.find('fileId'))
             .then((res) => {
                 console.log('delete', '删除成功');
                 this.loadFileList();
             }, ()=>{
                 console.log('delete', '删除失败');
             });
+        }
     }
     /**
      * 公共方法-下载文件
      */
     downloadFile() {
         this.model.save('downloadStr', this.view.getSelectedFileId());
-        this.service.allowDownload(this.model.find('downloadStr'))
+        if(this.view.getSelectedFileId() != ""){
+            this.service.allowDownload(this.model.find('downloadStr'))
             .then((res) => {
                 console.log('download', '下载文档');
                 this.service.download(this.model.find('downloadStr'))
             }, ()=>{
                 console.log('download', '文件不存在');
             });
+        }
     }
     /**
      * 公共方法-上传文件
      */
     uploadFile() {
-        console.log('upload')
+        this.loadFileList(); // 重置文件列表
+
     }
 }
 

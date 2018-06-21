@@ -68,9 +68,9 @@ class FuFileManageView {
      */
     _renderPreview(allowPreview, fileId, fileName) {
         if(allowPreview){
-            return `<a target="_Blank" href="http://localhost:54905/FileManage/FilePreview?fileid=${fileId}">${fileName}</a>`;
+            return `<a class="fu-fileManage-preview" target="_Blank" href="http://localhost:54905/FileManage/FilePreview?fileid=${fileId}">${fileName}</a>`;
         } else {
-            return `<a href="#">${fileName}</a>`;
+            return `<a class="fu-fileManage-preview-disabled" href="#">${fileName}</a>`;
         }
     }
     /**
