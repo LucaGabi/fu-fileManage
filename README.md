@@ -29,7 +29,7 @@ npm run build
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>
-        首页
+        文件管理组件
     </title>
 </head>
 <body>
