@@ -5,7 +5,14 @@ import FuFileManageController from './FuFileManageController';
 
 let view = new FuFileManageView("app");
 let model = new FuFileManageModel();
-let service = new FuFileManageService();
+let service = new FuFileManageService({
+    fileListUrl: '',
+    deleteFileUrl: '',
+    downloadFileUrl: '',
+    downloadFileCheckUrl: '',
+    uploadCheckUrl: '',
+    UploadFileUrl: ''
+});
 let controller = new FuFileManageController(model, view, service);
 
 controller.init();
