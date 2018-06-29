@@ -12,13 +12,13 @@ class FuWebUploader {
     // 初始化
     init(config) {
         this.config = config;
-        this.renderDom();
+        this.renderDOM();
         this.registerWebUploader(this.config.chunkCheckUrl, this.config.sourceId, this.config.allow);
         this.createWebUploader(this.config);
         this.circleWebUploader(this.config);
     }
     // 绘制组件
-    renderDom() {
+    renderDOM() {
         $(this.ID).append(
             `<div class="fu-fileUploadSimple-btns fu-clearfix">
                 <span id="fu_fileUploadSimple_info" class="fu-fileUploadSimple-info"></span>
